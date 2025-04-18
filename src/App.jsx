@@ -1,18 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from './components/Login/LoginPage';
-import AdminNavbar from "./components/Home/AdminNavbar";
-
+import Home from "./components/Home/Home";
 
 function App() {
   return (
-    <>
-      <Router>
-        <Routes>
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/" element={<AdminNavbar />} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/home/*" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
