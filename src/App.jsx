@@ -1,13 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginPage from './components/Login/LoginPage';
-import Home from "./components/Customer_support/Customer_support";
+import Login from './pages/Login/Login';
+import EmployeeDashboard from "./pages/Employee/Employee";
+import AdminDashboard from "./pages/Admin/Admin";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginPage />} />
-        <Route path="/home/*" element={<Home />} />
+        <Route path="/" element={<Login />} />
+        <Route path="/employee" element={<EmployeeDashboard />} />
+        <Route path="/admin" element={<AdminDashboard />} />
+
       </Routes>
     </Router>
   );
